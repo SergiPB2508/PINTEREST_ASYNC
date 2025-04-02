@@ -1,0 +1,84 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 1.5rem;
+    margin: 15px 0;
+  }
+  
+  header input {
+    padding: 1rem 1.4rem;
+    border-radius: 2rem;
+    flex-grow: 1;
+    background-color: var(--secondary);
+    border: none;
+    font-size: 1rem;
+    min-width: 100px;
+  }
+  
+  header img {
+    height: 28px;
+    width: 28px;
+  }
+  
+  header button:hover {
+    background-color: var(--secondary);
+  }
+  
+  header .icon {
+    filter: contrast(30%);
+  }
+  
+  header .profileimg {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+  
+  header .links a{
+    padding: 10px 20px;
+    border-radius: 100px;
+  }
+  
+  header .links a:hover{
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  header div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  @media (max-width: 850px) {
+  
+    header > div{
+      position: relative;
+    }
+  
+    header .links{
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background-color: var(--color-background);
+      top: 100%;
+      border-radius: 10px;
+      padding: 5px;
+    }
+  
+    header div:hover .links{
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 500px) {
+  
+    header .icon{
+      display: none;
+    }
+   
+  }
+  
