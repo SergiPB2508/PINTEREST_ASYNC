@@ -19,11 +19,11 @@ const card = (item) => {
               <div>
                   <div class="links">
                       <a href="" class="links-icon">
-                          <img src="src/img/camera.png" alt="Camera"/>
+                          <img src="assets/icon/camera.png" alt="Camera"/>
                           <p>+60</p>
                       </a>
                       <a href="#null" class="links-icon">
-                          <img src="src/img/heart.png" alt="Heart"/>
+                          <img src="assets/icon/heart.png" alt="Heart"/>
                           <p>38</p>
                       </a>    
                   </div>

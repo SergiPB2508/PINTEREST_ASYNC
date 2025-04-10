@@ -26,6 +26,10 @@ const searchPhotos = async (keyword) => {
     });
 
     fail.innerHTML = "Busqueda fallida, prueva otra vez!";
+
+    if(sessionStorage.getItem("1") == keyword){
+      sessionStorage.removeItem("1");
+    }
     
   }
   

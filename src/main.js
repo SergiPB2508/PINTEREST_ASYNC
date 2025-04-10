@@ -3,6 +3,8 @@ import card from "./components/card/card";
 import header from "./components/header/header";
 import searchPhotos from "./components/searchPhotos/searchPhotos";
 
+const key = "1";
+
 // HEADER
 header();
 
@@ -29,15 +31,21 @@ const galleryListeners = () => {
 
   input.addEventListener("keydown", async (e) => {
     if (e.key == "Enter") {
+
+      if(sessionStorage.getItem(key) == null){
+        sessionStorage.setItem(key, input.value);
+      }
+
       const images = await searchPhotos(input.value);  
       printItems(images.response.results);
+
       input.value = "";
     }
     
   });
 
   logo.addEventListener("click", async (e) => {
-    const images = await searchPhotos("");  
+    const images = await searchPhotos(sessionStorage.getItem("1"));  
     printItems(images.response.results);
     input.value = "";
   });
